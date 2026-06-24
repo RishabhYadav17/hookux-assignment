@@ -1,0 +1,42 @@
+export const services = [
+  {
+    id: 1,
+    title: "Web Dev",
+    top: "55%",
+    left: "18%",
+    rotate: "-25deg",
+    duration: 4,
+  },
+  {
+    id: 2,
+    title: "Web Design",
+    top: "42%",
+    left: "38%",
+    rotate: "-20deg",
+    duration: 5,
+  },
+  {
+    id: 3,
+    title: "App Design",
+    top: "48%",
+    left: "58%",
+    rotate: "20deg",
+    duration: 6,
+  },
+  {
+    id: 4,
+    title: "No Code Dev",
+    top: "20%",
+    left: "55%",
+    rotate: "-10deg",
+    duration: 5,
+  },
+  {
+    id: 5,
+    title: "SEO",
+    top: "70%",
+    left: "70%",
+    rotate: "8deg",
+    duration: 4,
+  },
+];
