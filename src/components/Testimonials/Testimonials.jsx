@@ -24,40 +24,59 @@ function Testimonials() {
       />
 
       {/* ================= MOBILE ================= */}
-      <div className="relative lg:hidden h-[700px]">
+      <div className="relative z-20 lg:hidden px-5">
 
-  {/* Center */}
-  <div
-    className="
-      absolute
-      left-1/2
-      top-1/2
-      -translate-x-1/2
-      -translate-y-1/2
-      text-center
-      z-20
-    "
-  >
-    <div className="mb-4 flex justify-center gap-2 text-yellow-400">
-      <FaStar />
-      <FaStar />
-      <FaStar />
-      <FaStar />
-      <FaStar />
-    </div>
+        <div className="text-center mb-14">
+          <div className="mb-4 flex justify-center gap-2 text-yellow-400">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
 
-    <h2 className="text-4xl font-bold text-white">
-      What Clients Say
-    </h2>
-  </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="
+              text-4xl
+              font-bold
+              text-white
+            "
+          >
+            What Clients Say
+          </motion.h2>
+        </div>
 
-  {testimonials.map((testimonial) => (
-    <MobileTestimonial
-      key={testimonial.id}
-      {...testimonial}
-    />
-  ))}
-</div>
+        <div className="space-y-5">
+          {testimonials.map((testimonial) => (
+            <motion.div
+              key={testimonial.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="
+                rounded-3xl
+                border
+                border-gray-800
+                bg-[#111]
+                p-6
+                text-white
+              "
+            >
+              <p className="text-gray-300 mb-4">
+                "{testimonial.review}"
+              </p>
+
+              <h4 className="font-semibold">
+                {testimonial.name}
+              </h4>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
       {/* ================= DESKTOP ================= */}
       <div className="relative hidden lg:block h-[700px]">
