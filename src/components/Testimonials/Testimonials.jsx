@@ -1,7 +1,8 @@
 import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { testimonials } from "../../data/testimonials";
 import FloatingTestimonial from "../FloatingTestimonial/FloatingTestimonial";
-import { motion } from "framer-motion";
+
 function Testimonials() {
   return (
     <section
@@ -10,7 +11,7 @@ function Testimonials() {
         relative
         overflow-hidden
         bg-black
-        py-40
+        py-32
       "
     >
       {/* Grid */}
@@ -22,7 +23,63 @@ function Testimonials() {
         "
       />
 
-      <div className="relative h-[700px]">
+      {/* ================= MOBILE ================= */}
+      <div className="relative z-20 lg:hidden px-5">
+
+        <div className="text-center mb-14">
+          <div className="mb-4 flex justify-center gap-2 text-yellow-400">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="
+              text-4xl
+              font-bold
+              text-white
+            "
+          >
+            What Clients Say
+          </motion.h2>
+        </div>
+
+        <div className="space-y-5">
+          {testimonials.map((testimonial) => (
+            <motion.div
+              key={testimonial.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="
+                rounded-3xl
+                border
+                border-gray-800
+                bg-[#111]
+                p-6
+                text-white
+              "
+            >
+              <p className="text-gray-300 mb-4">
+                "{testimonial.review}"
+              </p>
+
+              <h4 className="font-semibold">
+                {testimonial.name}
+              </h4>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* ================= DESKTOP ================= */}
+      <div className="relative hidden lg:block h-[700px]">
 
         {/* Center Content */}
         <div
@@ -36,7 +93,7 @@ function Testimonials() {
             z-20
           "
         >
-          <div className="mb-4 text-yellow-400 flex gap-2 justify-center">
+          <div className="mb-4 flex justify-center gap-2 text-yellow-400">
             <FaStar />
             <FaStar />
             <FaStar />
@@ -45,30 +102,29 @@ function Testimonials() {
           </div>
 
           <motion.h2
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.7 }}
-  className="
-    text-5xl
-    md:text-6xl
-    font-bold
-    text-white
-  "
->
-  What Clients Say
-</motion.h2>
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="
+              text-5xl
+              md:text-6xl
+              font-bold
+              text-white
+            "
+          >
+            What Clients Say
+          </motion.h2>
         </div>
 
-        {/* Scattered Cards */}
-        <div className="
-          absolute
-          left-1/2
-          top-1/2
-          scale-[0.5]
-          sm:scale-[0.7]
-          lg:scale-100
-        ">
+        {/* Scatter Animation */}
+        <div
+          className="
+            absolute
+            left-1/2
+            top-1/2
+          "
+        >
           {testimonials.map((testimonial) => (
             <FloatingTestimonial
               key={testimonial.id}
