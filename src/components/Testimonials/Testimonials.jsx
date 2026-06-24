@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { testimonials } from "../../data/testimonials";
 import FloatingTestimonial from "../FloatingTestimonial/FloatingTestimonial";
-import MobileTestimonial from "../MobileTestimonial/MobileTestimonial";
+
 function Testimonials() {
   return (
     <section
