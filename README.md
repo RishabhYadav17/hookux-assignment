@@ -15,13 +15,13 @@ The goal of this project was to recreate one of the key screens of the HookUX we
 
 ## Live Demo
 
-https://your-vercel-link.vercel.app
+https://hookux-assignment.vercel.app/
 
 ---
 
 ## Repository
 
-https://github.com/yourusername/hookux-clone
+https://github.com/RishabhYadav17/hookux-assignment
 
 ---
 
@@ -182,7 +182,7 @@ The floating layouts required additional adjustments to work correctly on smalle
 # Installation
 
 ```bash
-git clone https://github.com/yourusername/hookux-clone
+git clone https://github.com/RishabhYadav17/hookux-assignment
 
 cd hookux-clone
 
@@ -211,4 +211,4 @@ The project is deployed using Vercel.
 
 Rishabh Yadav
 
-Frontend Developer
+Web Developer
