@@ -5,6 +5,7 @@ export const testimonials = [
     name: "Creative Agency",
     x: -350,
     y: -180,
+    mobileY: -80,
     rotate: "-15deg",
   },
   {
@@ -13,6 +14,8 @@ export const testimonials = [
     name: "Modern Studio",
     x: 300,
     y: -150,
+     mobileY: -180,
+      
     rotate: "12deg",
   },
   {
@@ -21,6 +24,7 @@ export const testimonials = [
     name: "Startup Labs",
     x: -300,
     y: 180,
+     mobileY: 100,
     rotate: "-10deg",
   },
   {
@@ -28,7 +32,8 @@ export const testimonials = [
     review: "Highly recommended for digital projects.",
     name: "Brand House",
     x: 320,
-    y: 180,
+    y: 200,
+     mobileY: 220,
     rotate: "10deg",
   },
 ];
